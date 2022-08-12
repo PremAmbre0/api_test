@@ -8,6 +8,7 @@ import Provider from './Provider.vue'
 import { Auth0Plugin } from "./auth/index";
 
 import Vuelidate from "vuelidate";
+import vuetify from './plugins/vuetify'
 Vue.use(Vuelidate);
 
 
@@ -26,7 +27,8 @@ router.beforeEach((to, from, next) => {
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  render: h => h(Provider)
+    router,
+    store,
+    vuetify,
+    render: h => h(Provider)
 }).$mount('#app')
